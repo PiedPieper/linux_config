@@ -1,0 +1,45 @@
+[submodule "vim/plugins/vim-tmux-navigator"]
+	path = vim/plugins/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "vim/plugins/syntastic"]
+	path = vim/plugins/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim/plugins/vim-pathogen"]
+	path = vim/plugin_managers/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim/plugins/nerdcommenter"]
+	path = vim/plugins/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/plugins/vim"]
+	path = vim/vim
+	url = https://github.com/vim/vim.git
+[submodule "vim/plugins/vim-atom-dark"]
+	path = vim/colorschemes/vim-atom-dark
+	url = https://github.com/gosukiwi/vim-atom-dark.git
+[submodule "vim/plugins/vim-erlang-runtime"]
+	path = vim/plugins/vim-erlang-runtime
+	url = https://github.com/vim-erlang/vim-erlang-runtime.git
+[submodule "vim/plugins/vim-erlang-compiler"]
+	path = vim/plugins/vim-erlang-compiler
+	url = https://github.com/vim-erlang/vim-erlang-compiler.git
+[submodule "vim/plugins/vim-erlang-skeletons"]
+	path = vim/plugins/vim-erlang-skeletons
+	url = https://github.com/vim-erlang/vim-erlang-skeletons.git
+[submodule "vim/plugins/Dockerfile.vim"]
+	path = vim/plugins/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule "vim/plugins/YouCompleteMe"]
+	path = vim/plugins/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/plugins/nerdtree"]
+	path = vim/plugins/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/plugins/tern_for_vim"]
+	path = vim/plugins/tern_for_vim
+	url = https://github.com/ternjs/tern_for_vim.git
+[submodule "vim/plugins/dasht"]
+	path = vim/plugins/dasht
+	url = https://github.com/sunaku/dasht.git
+[submodule "vim/plugins/vim-dasht"]
+	path = vim/plugins/vim-dasht
+	url = https://github.com/sunaku/vim-dasht.git

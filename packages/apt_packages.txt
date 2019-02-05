@@ -3,3 +3,5 @@ i3
 feh
 git
 ssh
+redshift
+fluxgui
