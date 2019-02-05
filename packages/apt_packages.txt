@@ -1,0 +1,5 @@
+vim-nox-py2
+i3
+feh
+git
+ssh
