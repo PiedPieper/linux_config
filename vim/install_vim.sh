@@ -4,6 +4,8 @@ set -e
 
 ## Git load submodules 
 echo "Loading Submodules"       
+git submodule init 
+git submodule update 
 
 ## Clear .vim to rebuild fresh
 rm -rf .vim
