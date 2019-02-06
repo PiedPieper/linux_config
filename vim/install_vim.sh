@@ -4,9 +4,6 @@ set -e
 
 ## Git load submodules 
 echo "Loading Submodules"       
-git submodule update --init --recursive
-git submodule init
-git submodule update
 
 ## Clear .vim to rebuild fresh
 rm -rf .vim
@@ -31,4 +28,9 @@ do
 done < active_plugins.txt
 
 
-ln -s $(pwd)/.vim $HOME/.vim
+if [ ! -d $HOME/.vim ]; then
+    ln -s $(pwd)/.vim $HOME/.vim
+fi
+if [ ! -f $HOME/.vimrc ]; then
+    ln -s $(pwd)/.vimrc $HOME/.vimrc
+fi
