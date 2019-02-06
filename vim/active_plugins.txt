@@ -1,0 +1,4 @@
+nerdcommenter
+nerdtree
+syntastic
+YouCompleteMe
