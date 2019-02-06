@@ -2,6 +2,8 @@
 
 PACKAGES_FILE="apt_packages.txt"
 REPOSITORY_FILE="apt_repos.txt"
+INSTALL_SCRIPTS_FILE="install_scripts.txt"
+INSTALL_SCRIPTS_DIR="install_scripts"
 
 apt_update()
 {
@@ -29,6 +31,38 @@ install_apt_repos()
 	sudo add-apt-repository ${apt_packages[*]}
 	apt_update
 }
+install_w_scripts()
+{
+	## Read the package list and install all of the packages
+	while IFS='' read -r line || [[ -n "$line" ]]; do
+        echo "Executing $line !"
+        ./$INSTALL_SCRIPTS_DIR/$line
+	done < $INSTALL_SCRIPTS_FILE 
+}
 
-install_apt_repos
-install_apt_packages
+#install_apt_repos
+#install_apt_packages
+#install_w_scripts
+
+main()
+{
+	for arg in "$@"
+	do
+		case "$arg" in
+			--repos)
+				install_apt_repos
+				;;
+			--packages)
+				install_apt_packages
+				;;
+			--scripts)
+				install_w_scripts
+				;;
+			*)
+				echo "Undefined argument!"
+				;;
+		esac
+	done
+}
+
+main $@
