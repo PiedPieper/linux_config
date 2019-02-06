@@ -1,4 +1,3 @@
 
-
 ## Random Wallpaper
-feh --recursive --randomize --bg-fill ~/.wallpapers/ & 
+##feh --recursive --randomize --bg-fill ~/.wallpapers/ 

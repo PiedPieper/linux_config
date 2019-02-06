@@ -28,11 +28,18 @@ do
    echo "installing plugin to $install_dir"
    cp -r plugins/$plugin $install_dir 
 done < active_plugins.txt
+ 
+
+# Install colorschemes
+mkdir .vim/colors
+cp colorschemes/*/colors/* .vim/colors/ 
 
 
+# Install .vim and .vimrc
 if [ ! -d $HOME/.vim ]; then
     ln -s $(pwd)/.vim $HOME/.vim
 fi
 if [ ! -f $HOME/.vimrc ]; then
     ln -s $(pwd)/.vimrc $HOME/.vimrc
 fi
+
