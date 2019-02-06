@@ -160,4 +160,9 @@ bar {
 
 ## Ryan's Stuff
 
+# Turn on/off the bluelight filter
 bindsym $mod+Shift+b exec ~/.scripts/toggle-redshift.sh
+
+# Cycle through workspaces
+bindsym $mod+bracketright workspace next
+bindsym $mod+bracketleft workspace prev
