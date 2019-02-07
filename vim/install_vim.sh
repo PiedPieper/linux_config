@@ -37,9 +37,11 @@ cp colorschemes/*/colors/* .vim/colors/
 
 # Install .vim and .vimrc
 if [ ! -d $HOME/.vim ]; then
+    rm $HOME/.vim
     ln -s $(pwd)/.vim $HOME/.vim
 fi
 if [ ! -f $HOME/.vimrc ]; then
+    rm $HOME/.vimrc
     ln -s $(pwd)/.vimrc $HOME/.vimrc
 fi
 

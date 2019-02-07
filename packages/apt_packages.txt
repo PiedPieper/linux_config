@@ -8,3 +8,9 @@ fluxgui
 curl
 cmake
 valgrind
+exuberant-ctags
+wine1.6
+winetricks
+wireshark
+python-pip
+brightness-controller-simple

@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -160,9 +160,17 @@ bar {
 
 ## Ryan's Stuff
 
+## Auto (On Load)
+exec --no-startup-id feh --recursive --randomize --bg-fill ~/.wallpapers/ 
+
+## Manual
 # Turn on/off the bluelight filter
 bindsym $mod+Shift+b exec ~/.scripts/toggle-redshift.sh
 
 # Cycle through workspaces
 bindsym $mod+bracketright workspace next
 bindsym $mod+bracketleft workspace prev
+
+# Kill the workspace
+bindsym $mod+Control+Shift+k focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, kill
+

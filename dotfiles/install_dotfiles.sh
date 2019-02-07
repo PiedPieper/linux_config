@@ -11,9 +11,13 @@ do
             if [ -f $install_dst ] || [ -d $install_dst ] && [ ! -L $install_dst ]; then
                 echo "Moving $install_dst to $install_dst.bak"
                 mv $install_dst "${install_dst}.bak"
-            fi
-            if [ ! -f $install_dst ];then
+            elif  [ ! -f $install_dst ] && [ ! -L $install_dst ] ;then
                 echo "Linking $install_dst to $install_dst"
+                ln -s $install_src $install_dst
+	    else 
+		echo "Link exists. Removing"
+		rm $install_dst
+                echo "Re-linking $install_dst to $install_dst"
                 ln -s $install_src $install_dst
             fi
             ;;
