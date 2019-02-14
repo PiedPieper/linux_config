@@ -168,6 +168,7 @@ for_window [class="^.*"] border pixel 2
 gaps inner 15
 gaps outer 10
 smart_borders on
+smart_gaps on
 new_window none
 
 # Randomly pick a background
@@ -191,7 +192,9 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --recursive --randomize --bg-fill ~/.wallpapers/
 
 # When HDMI-1 is connected
+exec_always --no-startup-id xrandr --output eDP-1 --auto
 exec_always --no-startup-id xrandr --output HDMI-1 --auto --right-of eDP-1
+exec_always --no-startup-id xrandr --output HDMI-2 --auto --left-of eDP-1
 
 # Start compton 
 exec_always --no-startup-id compton --config ~/.compton_config -b 

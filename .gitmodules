@@ -12,7 +12,7 @@
 	url = https://github.com/vim/vim.git
 [submodule "vim/plugins/vim-atom-dark"]
 	path = vim/colorschemes/vim-atom-dark
-	url = https://github.com/gosukiwi/vim-atom-dark.git
+	url = git@github.com:PiedPieper/vim-atom-dark.git
 [submodule "vim/plugins/vim-erlang-runtime"]
 	path = vim/plugins/vim-erlang-runtime
 	url = https://github.com/vim-erlang/vim-erlang-runtime.git

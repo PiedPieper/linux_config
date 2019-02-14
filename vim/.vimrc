@@ -37,6 +37,8 @@ filetype indent on
 " Default Colorscheme - can add different ones
 " for different languages under ftplugin
 colorscheme atom-dark-256
+hi NonText ctermbg=none 
+hi Normal guibg=NONE ctermbg=NONE
 
 """"""""""""""""""""""
 " Misc remappings
