@@ -1,3 +1,6 @@
 ln,.config/i3/config,~/.config/i3/config
 ln,.xinitrc,~/.xinitrc
 ln,.wallpapers,~/.wallpapers
+ln,.config/polybar/config,~/.config/polybar/config
+ln,.config/polybar/launch.sh,~/.config/polybar/launch.sh
+ln,.compton_config,~/.compton_config

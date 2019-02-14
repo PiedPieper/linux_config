@@ -14,3 +14,7 @@ winetricks
 wireshark
 python-pip
 brightness-controller-simple
+libcairo2-dev
+libalsa-ocaml-dev
+adb
+moreutils
