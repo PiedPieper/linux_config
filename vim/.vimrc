@@ -40,6 +40,11 @@ colorscheme atom-dark-256
 hi NonText ctermbg=none 
 hi Normal guibg=NONE ctermbg=NONE
 
+" Vim & System Shared Clipboard
+set clipboard=unnamedplus
+
+
+
 """"""""""""""""""""""
 " Misc remappings
 """"""""""""""""""""""
@@ -51,7 +56,7 @@ nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
 "g is the command leader
-let mapleader="g"
+let mapleader="\\"
 
 "Printing no longer clears the buffer
 xnoremap p pgvy 
@@ -70,4 +75,5 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0 
 let g:syntastic_c_config_file='.syntastic_c_config'
+let g:syntastic_cpp_config_file='.syntastic_cpp_config'
 

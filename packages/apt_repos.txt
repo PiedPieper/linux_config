@@ -1,3 +1,4 @@
 ppa:nathan-renniewaldock/flux
 ppa:ubuntu-wine/ppa
 ppa:apandada1/brightness-controller
+ppa:apandada1/brightness-controller

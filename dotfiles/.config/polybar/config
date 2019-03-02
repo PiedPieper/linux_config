@@ -23,12 +23,6 @@ padding-right = 4
 module-margin-left = 0
 module-margin-right = 6
 
-;font-0 = NotoSans-Regular:size=8;0
-;font-1 = unifont:size=6;-3
-;font-2 = FontAwesome:size=8;-2
-;font-3 = NotoSans-Regular:size=8;-1
-;font-4 = MaterialIcons:size=10;-1
-;font-5 = Termsynu:size=8:antialias=false;0
 
 modules-left = i3
 modules-right = cpu memory
@@ -61,7 +55,7 @@ modules-right = battery date wireless-network
 tray-position = right
 ;tray-padding = 2 
 wm-restack = i3
-override-redirect = true 
+;override-redirect = true 
 
 [bar/top]
 monitor = HDMI-1

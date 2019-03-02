@@ -1,3 +1,4 @@
 nerdcommenter
 nerdtree
 syntastic
+vim-tmux-navigator

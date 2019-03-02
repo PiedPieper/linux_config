@@ -48,12 +48,6 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
@@ -184,18 +178,26 @@ bindsym $mod+bracketleft workspace prev
 # Kill the workspace
 bindsym $mod+Control+Shift+k focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, kill
 
-# Polybar
-exec_always --no-startup-id killall i3bar && sleep 1
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+bindsym $mod+Left exec i3-msg move workspace to output left
+bindsym $mod+Right exec i3-msg move workspace to output right
 
 # Wallpaper 
 exec_always --no-startup-id feh --recursive --randomize --bg-fill ~/.wallpapers/
 
 # When HDMI-1 is connected
 exec_always --no-startup-id xrandr --output eDP-1 --auto
-exec_always --no-startup-id xrandr --output HDMI-1 --auto --right-of eDP-1
-exec_always --no-startup-id xrandr --output HDMI-2 --auto --left-of eDP-1
+#exec_always --no-startup-id xrandr --output 0x43 --auto --left-of eDP-1
+exec_always --no-startup-id xrandr --output 0x43 --auto --right-of eDP-1
 
 # Start compton 
 exec_always --no-startup-id compton --config ~/.compton_config -b 
 
+# Start thunar
+bindsym $mod+t exec thunar
+
+# Polybar
+exec_always --no-startup-id killall i3bar && sleep 1
+exec_always --no-startup-id ~/.config/polybar/launch.sh 
+
+# Insync (Google Drive Client)
+exec --no-startup-id ~/.scripts/enable-insync.sh
