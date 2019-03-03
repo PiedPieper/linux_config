@@ -1,5 +1,6 @@
 #!/usr/bin/env bash 
 
+PIP_FILE="pip.txt"
 PACKAGES_FILE="apt_packages.txt"
 REPOSITORY_FILE="apt_repos.txt"
 INSTALL_SCRIPTS_FILE="install_scripts.txt"
@@ -39,6 +40,14 @@ install_w_scripts()
         ./$INSTALL_SCRIPTS_DIR/$line
 	done < $INSTALL_SCRIPTS_FILE 
 }
+install_pip_packages()
+{
+	## Read the package list and install all of the packages
+	while IFS='' read -r line || [[ -n "$line" ]]; do
+        echo "Installing via pip: $line !"
+        sudo pip install $line
+	done < $PIP_FILE
+}                 
 
 #install_apt_repos
 #install_apt_packages
@@ -58,6 +67,9 @@ main()
 			--scripts)
 				install_w_scripts
 				;;
+            --pip)
+                install_pip_packages
+                ;;
 			*)
 				echo "Undefined argument!"
 				;;
