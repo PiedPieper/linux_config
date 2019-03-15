@@ -3,9 +3,28 @@
 execute pathogen#infect()
 set runtimepath^=~/.vim/bundle/vim-erlang-runtime/
 
+
+" Vim Plug Plugin Manager
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+"Plug 'KabbAmine/zeavim.vim'
+call plug#end()
+
+
 """"""""""""""""""""""""""""""
 " General Settings
 """""""""""""""""""""""""""""" 
+" Enable folds on your file
+set foldmethod=syntax
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
 " Enable plugins
 filetype plugin on
 
@@ -48,6 +67,14 @@ set clipboard=unnamedplus
 """"""""""""""""""""""
 " Misc remappings
 """"""""""""""""""""""
+" Map ctrl keys so that i can navigate 
+" with standard vim mappings
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+
 "Command :Sw will save a file even if not opened as sudo
 command! -nargs=0 Sw w !sudo tee % > /dev/null
 
@@ -56,7 +83,7 @@ nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
 "g is the command leader
-let mapleader="\\"
+let mapleader=";"
 
 "Printing no longer clears the buffer
 xnoremap p pgvy 

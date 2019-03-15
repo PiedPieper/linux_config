@@ -1,0 +1,14 @@
+{
+  "segments": [
+    "virtual_env",
+    "ssh",
+    "cwd",
+    "git",
+    "git_stash",
+    "jobs",
+    "set_term_title",
+    "root"
+  ],
+  "mode": "compatible",
+  "theme": "basic"
+}
